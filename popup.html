@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ezply Job application</title>
-    <style>
-      body {
-        background-color: peachpuff;
-        color: maroon;
-      }
-      h1 {
-        width: 200px;
-      }
-      button {
-        width: 80px;
-        height: 20px;
-        font-family: cursive;
-        font-size: smaller;
-        color: brown;
-        text-align: center;
-        align-content: center;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>This is our first extension</h1>
-    <table>
-      <tr>
-        <td>Kavya</td>
-        <td>Tantuvay</td>
-      </tr>
-      <tr>
-        <td>Aarush</td>
-        <td>Singh</td>
-      </tr>
-    </table>
-    <p></p>
-    <button>click!</button>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZply - Job Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">EZply - Job Application</h2>
+        
+        <div class="form-group">
+            <label class="label" for="user">Select user:</label>
+            <select class="select-user" id="user">
+                <option value="user1">User 1</option>
+                <option value="user2">User 2</option>
+                <option value="user3">User 3</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label class="label" for="resume">Upload Resume:</label>
+            <input type="file" id="resume" accept=".pdf" class="file-upload">
+        </div>
+        
+        <p class="warning">*Required fields: Name, Email, Work experience, Education, Skills</p>
+        
+        <div class="copilot-section">
+            <label class="label">Copilot for descriptive questions:</label>
+            <button class="copilot-btn" onclick="window.open('https://copilot.microsoft.com', '_blank')">
+                <img src="copilot.png" alt="Copilot" class="copilot-icon">
+                <span>Message Copilot</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
 </html>
+
